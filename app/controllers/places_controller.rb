@@ -41,10 +41,12 @@ class PlacesController < ApplicationController
 
   private
   def place_params
-    params.require(:place).permit(:activities,
-                                 :food, 
-                                 :facilities,
-                                 :                      
+    params.require(:place).permit(:name,
+                                 :country, 
+                                 :description,
+                                 :languages,
+                                 :timezone,
+                                 :region_id
                                 )
   end
 

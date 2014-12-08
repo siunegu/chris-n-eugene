@@ -11,6 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141208072128) do
+
+  create_table "attractions", force: true do |t|
+    t.string   "attraction_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "places", force: true do |t|
+    t.string   "name"
+    t.string   "country"
+    t.text     "description"
+    t.string   "languages"
+    t.string   "timezone"
+    t.integer  "region_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regions", force: true do |t|
+    t.string   "name"
+    t.string   "climate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
