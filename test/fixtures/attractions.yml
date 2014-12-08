@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activities: MyString
+  food: MyString
+  facilities: MyString
+
+two:
+  activities: MyString
+  food: MyString
+  facilities: MyString
