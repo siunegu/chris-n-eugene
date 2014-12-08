@@ -41,3 +41,6 @@ gem 'spring',        group: :development
 # Use annotate
 gem 'annotate'
 
+# Use FlickRaw
+gem 'flickraw'
+

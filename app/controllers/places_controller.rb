@@ -1,6 +1,5 @@
 class PlacesController < ApplicationController
-
-  before_action :authorize_admin!, except: [:index, :show]
+  # before_action :authorize_admin!, except: [:index, :show]
   before_action :find_place, only: [:show, :edit, :destroy, :update]
 
   def index
@@ -21,6 +20,12 @@ class PlacesController < ApplicationController
   end
 
   def show
+		FlickRaw.api_key="e74c109a55b31224ff0e81e87f95ff7f"
+		FlickRaw.shared_secret="df20bd30ceec1a10"
+		flickr_photos = flickr.photos.search(text: @place.name, region: 6, is_getty: true, per_page: 10)
+		@photos = flickr_photos.map do |photo|
+			FlickRaw.url(photo)
+		end 
   end
 
   def edit  
