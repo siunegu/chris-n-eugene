@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-
+  
   resources :home
   resources :places
-  root "home#index"
+  resources :attractions
+  resources :regions
+  resources :activities 
 
+  root "home#index"
 end
