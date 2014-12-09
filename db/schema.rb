@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20141209044416) do
+
 
   create_table "activities", force: true do |t|
     t.string   "name"
@@ -23,6 +25,19 @@ ActiveRecord::Schema.define(version: 20141209044416) do
 
   create_table "attractions", force: true do |t|
     t.string   "attraction_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "itineraries", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "itinerary_places", force: true do |t|
+    t.integer  "place_id"
+    t.integer  "itinerary_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

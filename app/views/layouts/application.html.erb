@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Whereto</title>
+  <title>Whyshouldigo.to</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 
       <div id="log_in_area">
          <% if user_signed_in? %>
@@ -21,6 +22,14 @@
 
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+
+<div>
+	<%= link_to 'Places', places_path %>
+	<%= link_to 'Regions', regions_path %>
+	<%= link_to 'Itineraries', itineraries_path %>	
+	<%= link_to 'Activities', activities_path %>
+	<%= link_to 'Attractions', attractions_path %>	
+</div>
 
 <%= yield %>
 

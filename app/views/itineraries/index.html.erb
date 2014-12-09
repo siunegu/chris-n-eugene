@@ -1,0 +1,8 @@
+<ul>
+<% @itineraries.each do |itinerary| %>
+	<li>
+	<%= link_to itinerary.name, itinerary_path(itinerary) %>
+	<%= link_to 'Edit', edit_itinerary_path(itinerary)  %>
+	</li>
+<% end %>
+</ul>
