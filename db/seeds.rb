@@ -55,7 +55,27 @@ Region.create ({
 	climate: "Warm"
 })
 
+# Log in seeds
+#normal 
+User.create(
+{
+  email: "normal@example.com",
+  password: "password",
+  password_confirmation: "password",
+  confirmed_at: Time.now,
+})
+
+#admin
+User.create({
+  email: "admin@example.com",
+  password: "password",
+  password_confirmation: "password",
+  confirmed_at: Time.now,
+  
+})
+
 ## Itinerary
 Itinerary.create ({
 	name: "Truly Asia"
 	})
+

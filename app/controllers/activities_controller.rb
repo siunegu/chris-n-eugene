@@ -5,6 +5,7 @@ class ActivitiesController < ApplicationController
   before_action :find_activities, only: [:show, :edit, :destroy, :update]
 
 
+
   def index
     @activity = Activity.all 
   end
