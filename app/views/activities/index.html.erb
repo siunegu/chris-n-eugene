@@ -1,7 +1,8 @@
+<% if user_signed_in? && current_user.admin? %>
 <div>
 <%= link_to 'New Activity', new_activity_path %>
-<%= link_to 'Add activities', new_activity_path %>
 </div>
+<% end %>
 
 <p>
 <% @activity.each do |activity|  %>
@@ -11,8 +12,11 @@
 
 <%= link_to activity.attraction_name, activity  %>
 
-<%= link_to 'Edit', edit_activity_path(activity) %>
-
+	<% if user_signed_in? && current_user.admin? %>
+		<%= link_to 'Edit', edit_activity_path(activity) %>
+		<%= link_to 'Destroy', activity, method: :delete %>
+	<% end %>
+	
 <% end %>
 </p>
 

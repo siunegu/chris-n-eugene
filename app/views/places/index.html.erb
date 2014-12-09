@@ -1,12 +1,19 @@
+<% if user_signed_in? && current_user.admin? %>
 <div>
 <%= link_to 'Add Place', new_place_path %>
 </div>
+<% end %>
 
 <ul>
 <% @places.each do |place| %>
 	<li>
 	<%= link_to place.name, place_path(place) %>
-	<%= link_to 'Edit', edit_place_path(place)  %>
+
+	<% if user_signed_in? && current_user.admin? %>
+		<%= link_to 'Edit', edit_place_path(place)  %>
+		<%= link_to 'Destroy', place, method: :delete %>
+	<% end %>
+
 	</li>
 <% end %>
 </ul>

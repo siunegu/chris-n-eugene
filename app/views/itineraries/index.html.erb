@@ -1,13 +1,17 @@
+<% if user_signed_in? && current_user.admin? %>
 <div>
 <%= link_to 'New Adventure', new_itinerary_path %>
 </div>
+<% end %>
 
 <ul>
 <% @itineraries.each do |itinerary| %>
 	<li>
 	<%= link_to itinerary.name, itinerary_path(itinerary) %>
-	<%= link_to 'Edit', edit_itinerary_path(itinerary)  %>
-	<%= link_to 'Delete', itinerary, method: :delete %>
+	<% if user_signed_in? && current_user.admin? %>
+		<%= link_to 'Edit', edit_itinerary_path(itinerary)  %>
+		<%= link_to 'Delete', itinerary, method: :delete %>
+	<% end %>
 	</li>
 <% end %>
 </ul>

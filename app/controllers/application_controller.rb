@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authorize_admin!
-      authenticate_user!
+  	authenticate_user!
 
-      # unless current_user.admin?
-      #   redirect_to root_path, alert: "You are not authorised to access this page."
-      # end
-    end
-    
+  	unless current_user.admin?
+  		redirect_to root_path, alert: "You are not authorized to access this page."
+  	end
+
+  end
 end

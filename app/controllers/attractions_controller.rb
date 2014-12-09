@@ -1,7 +1,6 @@
 class AttractionsController < ApplicationController
-
-  # before_action :authorize_admin!, except: [:index, :show]
-  before_action :find_attraction, only: [:show, :edit, :destroy, :update]
+before_action :authorize_admin!, except: [:index, :show]
+before_action :find_attraction, only: [:show, :edit, :destroy, :update]
 
 
   def index
