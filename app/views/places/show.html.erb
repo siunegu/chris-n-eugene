@@ -1,8 +1,8 @@
 	<h2><%= @place.name %></h2>
-	<h4><%= @place.country %></h4>
-	<h4><%= @place.languages %></h4>
-	<%= @place.timezone %>
-	<%= @place.description %>
+	<h4>Country: <%= @place.country %></h4>
+	<h4>Main Language: <%= @place.languages %></h4>
+	<p>Timezone: <%= @place.timezone %></p>
+	<p><%= @place.description %></p>
 
 	<% @photos.each do |photo| %>
 		<%= image_tag(photo) %>

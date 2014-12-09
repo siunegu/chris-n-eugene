@@ -9,6 +9,19 @@ end
 def show
 end
 
+def new
+	@region = Region.new
+end
+
+def create
+	@region = Region.new(region_params)
+	if @region.save
+		redirect_to regions_path
+	else
+		render 'new'
+	end
+end
+
 def edit
 end
 
