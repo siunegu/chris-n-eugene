@@ -11,6 +11,7 @@
 #
 
 class Activity < ActiveRecord::Base
-
   belongs_to :attraction
+  has_many :attraction_activities
+  has_many :attractions, through: :attraction_activities  
 end

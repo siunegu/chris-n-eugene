@@ -9,7 +9,7 @@
 #
 
 class Attraction < ActiveRecord::Base
-
-  has_many :activities
-  has_many :places
+	belongs_to :places
+  has_many :attraction_activities
+  has_many :activities, through: :attraction_activities
 end

@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   def authorize_admin!
       authenticate_user!
 
-      unless current_user.admin?
-        redirect_to root_path, alert: "You are not authorised to access this page."
-      end
+      # unless current_user.admin?
+      #   redirect_to root_path, alert: "You are not authorised to access this page."
+      # end
     end
     
 end
