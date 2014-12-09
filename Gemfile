@@ -47,3 +47,7 @@ gem 'flickraw'
 # Use Devise
 gem 'devise'
 
+#use bootstrap
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
