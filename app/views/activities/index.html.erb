@@ -1,11 +1,16 @@
 
-your activities
+<%= link_to 'Add activities', new_activity_path %>
+
 
 <p>
 <% @activity.each do |activity|  %>
-<div id="list_items">
+
 <%= link_to activity.attraction_name, activity  %>
-</div>
+
+<%= link_to 'Edit', edit_activity_path(activity) %>
+
+
+
 <% end %>
 </p>
 
