@@ -27,7 +27,7 @@ before_action :find_itinerary, only: [:show, :edit, :update, :destroy]
 
 		if @itinerary.save
 			redirect_to @itinerary
-		elser
+		else
 			render 'new'
 		end
 	end
@@ -46,10 +46,8 @@ before_action :find_itinerary, only: [:show, :edit, :update, :destroy]
 	end
 
 	def destroy
-		@itinerary = Itinerary.find params[:id]
-		if @itinerary.delete
-		redirect_to itineraries_path
-		end
+		@itinerary.delete
+		redirect_to itineraries_path(@itinerary)
 	end
 
 	private #Everything below this is private
@@ -62,7 +60,8 @@ before_action :find_itinerary, only: [:show, :edit, :update, :destroy]
 		# else
 		# 	@itinerary = current_user.itineraries.find(params[:id])
 		# end		
-			@itinerary = Itinerary.find params[:id]		
+			
+		@itinerary = Itinerary.find params[:id]		
 	end
 
 	def itinerary_params

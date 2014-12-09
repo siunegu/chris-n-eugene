@@ -24,13 +24,9 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-
-
-    
   end
 
-  def edit
-    
+  def edit   
   end
 
 

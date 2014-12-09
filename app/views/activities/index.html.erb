@@ -1,0 +1,13 @@
+<div>
+<%= link_to 'New Activity', new_activity_path %>
+</div>
+
+<ul>
+<% @activities.each do |activity| %>
+	<li>
+	<%= link_to activity.name, activity_path(activity) %>
+	<%= link_to 'Edit', edit_activity_path(activity)  %>
+	<%= link_to 'Delete', activity, method: :delete %>
+	</li>
+<% end %>
+</ul>
