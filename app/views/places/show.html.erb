@@ -1,11 +1,8 @@
-<% @place.each do |place| %>	
-	<h1><%= place.name %></h1>
-	<h3><%= place.name %></h3>
-	<h4><%= place.country %></h4>
-	<h4><%= place.languages %></h4>
-	<%= place.timezone %>
-	<%= place.description %>
-<% end %>
+	<h2><%= @place.name %></h2>
+	<h4><%= @place.country %></h4>
+	<h4><%= @place.languages %></h4>
+	<%= @place.timezone %>
+	<%= @place.description %>
 
 	<% @photos.each do |photo| %>
 		<%= image_tag(photo) %>

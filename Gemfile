@@ -45,5 +45,5 @@ gem 'annotate'
 gem 'flickraw'
 
 # Use Devise
-gem 'Devise'
+gem 'devise'
 

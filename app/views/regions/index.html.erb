@@ -1,1 +1,13 @@
-<h1>Your region</h1>
+
+<div>
+<%= link_to 'Add Region', new_region_path %>
+</div>
+
+<ul>
+<% @regions.each do |region| %>	
+		<li>
+		<%= link_to region.name, region %>
+		<%= link_to 'Edit', edit_region_path(region) %>
+		</li>
+<% end %>
+</ul>

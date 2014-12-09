@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20141208213828) do
     t.text     "description"
     t.string   "languages"
     t.string   "timezone"
-    t.integer  "search_item"
     t.integer  "region_id"
     t.datetime "created_at"
     t.datetime "updated_at"

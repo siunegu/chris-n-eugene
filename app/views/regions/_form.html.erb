@@ -1,5 +1,3 @@
-
-
 <%= form_for @region do |f| %>
   <div class="form-group">
     <%= f.label :name %>
@@ -7,10 +5,9 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text :description %>
-  </div>
-
+    <%= f.label :climate %>
+    <%= f.text_field :climate %>
+  </div>  
 
   <div class="form-group">
     <%= f.submit %> 
