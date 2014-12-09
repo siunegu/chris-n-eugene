@@ -26,3 +26,21 @@ Attraction.create ({
 Attraction.create ({
 	attraction_name: "Bondi Beach",
 })
+
+#normal 
+User.create(
+{
+  email: "normal@example.com",
+  password: "password",
+  password_confirmation: "password",
+  confirmed_at: Time.now,
+})
+
+#admin
+User.create({
+  email: "admin@example.com",
+  password: "password",
+  password_confirmation: "password",
+  confirmed_at: Time.now,
+  
+})

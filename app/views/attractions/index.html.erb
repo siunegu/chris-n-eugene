@@ -1,1 +1,9 @@
 Attractions
+
+<p>
+<% @attraction.each do |attraction|  %>
+<div id="list_items">
+<%= link_to attraction.attraction_name, attraction  %>
+</div>
+<% end %>
+</p>

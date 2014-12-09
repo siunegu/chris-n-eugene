@@ -1,1 +1,9 @@
 your activities
+
+<p>
+<% @activity.each do |activity|  %>
+<div id="list_items">
+<%= link_to activity.attraction_name, activity  %>
+</div>
+<% end %>
+</p>
