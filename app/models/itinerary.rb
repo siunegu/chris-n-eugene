@@ -1,14 +1,16 @@
 # == Schema Information
 #
-# Table name: regions
+# Table name: itineraries
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  climate    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #
 
-class Region < ActiveRecord::Base
-	has_many :places	
+class Itinerary < ActiveRecord::Base
+	belongs_to :user
+	
+	has_many :itinerary_place
+	has_many :places, through: :itinerary_place
 end

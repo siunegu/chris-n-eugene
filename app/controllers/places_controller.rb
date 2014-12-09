@@ -22,9 +22,9 @@ class PlacesController < ApplicationController
   def show
 		FlickRaw.api_key="e74c109a55b31224ff0e81e87f95ff7f"
 		FlickRaw.shared_secret="df20bd30ceec1a10"
-		flickr_photos = flickr.photos.search(text: @place.name, region: 6, is_getty: true, per_page: 10)
+		flickr_photos = flickr.photos.search(text: @place.name, region: 6, is_getty: true, per_page: 10, privacy_filter: 1)
 		@photos = flickr_photos.map do |photo|
-			FlickRaw.url(photo)
+			FlickRaw.url_b(photo)
 		end 
   end
 

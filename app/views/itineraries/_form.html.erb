@@ -1,13 +1,11 @@
-<%= form_for @region do |f| %>
+<%= form_for @itinerary do |f| %>
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :climate %>
-    <%= f.text_field :climate %>
-  </div>  
+  <%= f.label :place_ids, 'Places' %>
+  <%= f.collection_check_boxes :place_ids, Place.all, :id, :name %>   
 
   <div class="form-group">
     <%= f.submit %> 

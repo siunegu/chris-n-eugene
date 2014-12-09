@@ -1,10 +1,7 @@
 class ActivitiesController < ApplicationController
 
-
-#   before_action :authorize_admin!, except: [:index, :show]
-  
-# before_action :find_activities, only: [:show, :edit, :destroy, :update]
-
+  before_action :authorize_admin!, except: [:index, :show]
+  before_action :find_activities, only: [:show, :edit, :destroy, :update]
 
   def index
     @activity = Activity.all 
@@ -25,18 +22,13 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-
-
-    
   end
 
-  def edit
-    
+  def edit   
   end
 
 
   def update
-    
     if @activity.update(activity_params)
       redirect_to @activity         
     else
@@ -46,7 +38,6 @@ class ActivitiesController < ApplicationController
 
 
   def destroy
-    
     @activity.destroy
     redirect_to activities_path
   end
@@ -59,7 +50,7 @@ class ActivitiesController < ApplicationController
                                 )
   end
 
-    def find_attraction
+  def find_attraction
     @activity = Activity.find params[:id]
   end
 

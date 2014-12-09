@@ -14,6 +14,8 @@
 #
 
 class Place < ActiveRecord::Base
-
-  
+  belongs_to :region
+  has_many :activities
+  has_many :itinerary_places
+  has_many :itineraries, through: :itinerary_places
 end
