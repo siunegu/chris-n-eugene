@@ -44,3 +44,7 @@ gem 'annotate'
 # Use FlickRaw
 gem 'flickraw'
 
+#use devise
+
+gem 'devise'
+
