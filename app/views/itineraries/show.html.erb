@@ -3,4 +3,8 @@
 <% @itinerary.places.each do |place| %>
 	<%= place.name %>
 <% end %>
+
+<% @photos.each do |photo| %>
+	<%= image_tag(photo) %>
+<% end %>
 	

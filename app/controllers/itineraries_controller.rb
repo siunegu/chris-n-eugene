@@ -1,11 +1,16 @@
 class ItinerariesController < ApplicationController
-before_action :find_itinerary, only: [:edit, :update, :destroy]
+before_action :find_itinerary, only: [:show, :edit, :update, :destroy]
 	def index
 		@itineraries = Itinerary.all
 	end	
 
 	def show
-		@itinerary = Itinerary.find params[:id]
+		FlickRaw.api_key="e74c109a55b31224ff0e81e87f95ff7f"
+		FlickRaw.shared_secret="df20bd30ceec1a10"
+		flickr_photos = flickr.photos.search(text: @itinerary.places.name, region: 6, is_getty: true, per_page: 10, privacy_filter: 1)
+		@photos = flickr_photos.map do |photo|
+			FlickRaw.url_b(photo)
+		end 		
 	end
 
 	def new
@@ -49,14 +54,15 @@ before_action :find_itinerary, only: [:edit, :update, :destroy]
 
 	private #Everything below this is private
 
-	def find_playlist
+	def find_itinerary
 	#Below: if current user is an admin, show all of the 
 	# entries, otherwise only find the current users' playlists.		
-		if current_user.admin?
-			@itinerary = Itinerary.find params[:id]
-		else
-			@itinerary = current_user.itineraries.find(params[:id])
-		end		
+		# if current_user.admin?
+		# 	@itinerary = Itinerary.find params[:id]
+		# else
+		# 	@itinerary = current_user.itineraries.find(params[:id])
+		# end		
+			@itinerary = Itinerary.find params[:id]		
 	end
 
 	def itinerary_params
