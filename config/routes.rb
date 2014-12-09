@@ -41,6 +41,14 @@
 #                 PATCH  /activities/:id(.:format)       activities#update
 #                 PUT    /activities/:id(.:format)       activities#update
 #                 DELETE /activities/:id(.:format)       activities#destroy
+#     itineraries GET    /itineraries(.:format)          itineraries#index
+#                 POST   /itineraries(.:format)          itineraries#create
+#   new_itinerary GET    /itineraries/new(.:format)      itineraries#new
+#  edit_itinerary GET    /itineraries/:id/edit(.:format) itineraries#edit
+#       itinerary GET    /itineraries/:id(.:format)      itineraries#show
+#                 PATCH  /itineraries/:id(.:format)      itineraries#update
+#                 PUT    /itineraries/:id(.:format)      itineraries#update
+#                 DELETE /itineraries/:id(.:format)      itineraries#destroy
 #            root GET    /                               home#index
 #                 GET    /photos/:id(.:format)           photos#show
 #                 GET    /search/:search_item(.:format)  photos#show
@@ -52,7 +60,8 @@ Rails.application.routes.draw do
   resources :places
   resources :attractions
   resources :regions
-  resources :activities 
+  resources :activities
+  resources :itineraries 
 
   root "home#index"
   get '/photos/:id', to: 'photos#show'

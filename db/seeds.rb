@@ -54,3 +54,8 @@ Region.create ({
 	name: "Europe",
 	climate: "Warm"
 })
+
+## Itinerary
+Itinerary.create ({
+	name: "Truly Asia"
+	})

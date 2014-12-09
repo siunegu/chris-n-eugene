@@ -1,11 +1,12 @@
 # == Schema Information
 #
-# Table name: itineraries
+# Table name: itinerary_places
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id           :integer          not null, primary key
+#  place_id     :integer
+#  itinerary_id :integer
+#  created_at   :datetime
+#  updated_at   :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
