@@ -1,27 +1,56 @@
 <div class="jumbotron jumbotron-front-page">
-  <div class="container front-page">
-    <h1>Where Should I Go Next?</h1>
-    <p>Inspiring snippets from exotic travel destinations from around the world.</p>
-    <p><a class="btn btn-success btn-lg" href="#" role="button">Learn more</a></p>    
-  </div>
+	<div class="container front-page">
+		<h1>Where Should I Go Next?</h1>
+		<p>Inspiring snippets from exotic travel destinations from around the world.</p>
+		<p><a class="btn btn-success btn-lg" href="#about" role="button">Learn more</a></p>    
+	</div>
 </div>
 
 <div class="container">
 
 	<div class="row">
-
-		<div class="col-md-4">
-			
+		<div id="about" class="col-lg-12">
+				<h2><span class="glyphicon glyphicon-map-marker"></span> <span style="color:#1abc9c">Here's abit about us</span></h2>
+				<p>A little photo service that let's you find your next great destination.</p>
 		</div>
-
-		<div class="col-md-4">
-			
-		</div>
-
-		<div class="col-md-4">
-			
-		</div>	
-			
 	</div>
 
+	<div class="row">
+		<div class="marketing col-lg-4">
+			<div class="third">
+				<%= link_to root_path do %>
+				<%= image_tag "Map.png" %>
+				<% end %>			
+			</div>
+			<h2>Discover</h2>
+			<div class="round">			
+			<p>Goodness that shook penguin a hello that hen crud alas snarlingly equal well terrier shut forbade goodness purposefully after and more.</p>
+			</div>
+		</div>
+
+		<div class="marketing col-lg-4">
+			<div class="third">
+				<%= link_to places_path do %>
+				<%= image_tag "Compass.png" %>
+				<% end %>			
+			</div>
+			<h2>Explore</h2>
+			<div class="round">
+			<p>And across bearish a since hello the wherever regardless one oh sleazy and less opaque dismissive a and kangaroo dear on and the sweepingly the cost the some candid.</p></div>        		
+		</div>
+
+		<div class="marketing col-lg-4">
+			<div class="third">
+				<%= link_to itineraries_path do %>
+				<%= image_tag "Book.png" %>
+				<% end %>			
+			</div>
+			<h2>Share</h2> 
+			<div class="round">			
+			<p>Arguably while caribou immodestly that far far dear much gazelle read and tastefully bid tepid monogamous metaphoric momentously quetzal krill.</p>       		
+			</div>
+		</div>	
+
+		
+	</div>
 </div>
