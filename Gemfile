@@ -53,4 +53,5 @@ gem 'bootstrap-sass'
 # Use Autoprefixer
 gem 'autoprefixer-rails'
 
-
+# Use Gravatar
+gem 'gravtastic'

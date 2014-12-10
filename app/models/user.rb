@@ -20,7 +20,9 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-
+  include Gravtastic
+		gravtastic
+		
   has_many :itineraries
 
   devise :database_authenticatable, :registerable, :confirmable,

@@ -2,11 +2,11 @@
 /*Logo*/
 
 .logo img {	
-  transition: all 0.5s ease;
-  -webkit-filter-transition: all 0.5s ease;
-  -moz-filter-transition: all 0.5s ease;  
-  -o-filter-transition: all 0.5s ease;
-  -ms-filter-transition: all 0.5s ease;  
+	transition: all 0.5s ease;
+	-webkit-filter-transition: all 0.5s ease;
+	-moz-filter-transition: all 0.5s ease;  
+	-o-filter-transition: all 0.5s ease;
+	-ms-filter-transition: all 0.5s ease;  
 }
 
 .logo img:hover {
@@ -20,11 +20,11 @@
 /*Components Button*/
 
 .btn {
-  transition: all 0.5s ease;
-  -webkit-filter-transition: all 0.5s ease;
-  -moz-filter-transition: all 0.5s ease;  
-  -o-filter-transition: all 0.5s ease;
-  -ms-filter-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-webkit-filter-transition: all 0.5s ease;
+	-moz-filter-transition: all 0.5s ease;  
+	-o-filter-transition: all 0.5s ease;
+	-ms-filter-transition: all 0.5s ease;
 }
 
 /*Navigation*/
@@ -32,7 +32,7 @@
 .navbar {
 	position: relative;
 	min-height: 50px;
- 	margin-bottom: 0; 
+	margin-bottom: 0; 
 	border: 1px solid transparent;
 }
 
@@ -43,6 +43,18 @@
 	line-height: 25px;
 	height: 50px;
 }
+/*Shifting the nav elements down begin*/
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+	margin-left: -15px;
+	margin-top: 8px;
+}
+
+.navbar-left {
+	float: left !important;
+	margin-top: 10px;
+}
+/*Shifting the nav elements down end*/
+
 
 .navbar-default {
 	background-color: #f8f8f8;
@@ -62,19 +74,21 @@
 /*Main page*/
 
 .jumbotron-front-page {
+	text-align: center !important;	
 	padding: 260px;
-	background-image: url('background-mountain.jpg');
+	color: white;
+	background-image: url('background-mountaint-sunset.jpg');
 	background-repeat: none;
 	background-position: top center;
 	background-size: cover;
 }
 
 .jumbotron-front-page h1 {
-	color: #ffffff;
 	font-weight: 900px;
-  text-shadow: 0 2px rgba(255, 255, 255, 0.1);			
+	font-size: 84px;
+	text-shadow: 0 2px rgba(255, 255, 255, 0.1);			
 }
 
-
-
-
+.jumbotron-front-page p {
+	font-size: 32px;
+}
