@@ -1,3 +1,32 @@
+
+/*Logo*/
+
+.logo img {	
+  transition: all 0.5s ease;
+  -webkit-filter-transition: all 0.5s ease;
+  -moz-filter-transition: all 0.5s ease;  
+  -o-filter-transition: all 0.5s ease;
+  -ms-filter-transition: all 0.5s ease;  
+}
+
+.logo img:hover {
+	filter: opacity(70%);
+	-webkit-filter: opacity(70%);
+	-moz-filter: opacity(70%);
+	-o-filter: opacity(70%);
+	-ms-filter: opacity(70%);
+}
+
+/*Components Button*/
+
+.btn {
+  transition: all 0.5s ease;
+  -webkit-filter-transition: all 0.5s ease;
+  -moz-filter-transition: all 0.5s ease;  
+  -o-filter-transition: all 0.5s ease;
+  -ms-filter-transition: all 0.5s ease;
+}
+
 /*Navigation*/
 
 .navbar {
@@ -32,6 +61,20 @@
 
 /*Main page*/
 
-.jumbotron-custom {
-
+.jumbotron-front-page {
+	padding: 260px;
+	background-image: url('background-mountain.jpg');
+	background-repeat: none;
+	background-position: top center;
+	background-size: cover;
 }
+
+.jumbotron-front-page h1 {
+	color: #ffffff;
+	font-weight: 900px;
+  text-shadow: 0 2px rgba(255, 255, 255, 0.1);			
+}
+
+
+
+
