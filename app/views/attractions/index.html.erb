@@ -16,11 +16,11 @@
 			<div class="row">
 				<% @attraction.each do |attraction|  %>
 				<div class="col-md-4 marketing places-index-img" >
-					<%= link_to attraction.attraction_name, attraction  %>
+					<h2><%= link_to attraction.attraction_name, attraction  %></h2>
 
 					<% if user_signed_in? && current_user.admin? %>
-					<%= link_to 'Edit', edit_attraction_path(attraction) %>
-					<%= link_to 'Destroy', attraction, method: :delete %>
+					<%= link_to 'Edit', edit_attraction_path(attraction), class: "btn btn-info"  %>
+					<%= link_to 'Destroy', attraction, method: :delete, class: "btn btn-danger" %>
 					<% end %>	
 				</div>
 				<% end %>

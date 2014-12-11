@@ -1,27 +1,32 @@
 <div class="container">
-	<div class="row index-heading">
-		<div class="col-lg-8">
-			<h1>Regions<span class="glyphicon glyphicon-map-marker" style="color:#1abc9c"></span></h1>
-		</div>
-		<% if user_signed_in? && current_user.admin? %>
-		<div class="col-lg-4-offset button-fix">
-			<%= link_to 'Add Region', new_region_path, class: "btn btn-success" %>
-		</div>
-		<% end %>
-	<hr>
-
-		<div class="row">
-				<% @regions.each do |region| %>	
-						<div class="col-md-4 marketing places-index-img" >
-
-					<%= link_to region.name, region %>
-
+			<div class="row index-heading">
+				<div class="col-lg-8">
+						<h1>Regions<span class="glyphicon glyphicon-map-marker" style="color:#1abc9c"></span></h1>
+					</div>
+						<div class="col-lg-4">
 					<% if user_signed_in? && current_user.admin? %>
-					<%= link_to 'Edit', edit_region_path(region) %>
-					<%= link_to 'Destroy', region, method: :delete %>
+
+					<div class="button-fix">
+						<%= link_to 'Add Region', new_region_path, class: "btn btn-success" %>
+					</div>
+
 					<% end %>
 					</div>
-				<% end %>
-		</div>
+					</div>
+				<hr>
+
+					<div class="row">
+							<% @regions.each do |region| %>	
+									<div class="col-md-4 marketing places-index-img" >
+
+								<h2><%= link_to region.name, region %></h2>
+
+								<% if user_signed_in? && current_user.admin? %>
+								<%= link_to 'Edit', edit_region_path(region), class: "btn btn-info" %>
+								<%= link_to 'Destroy', region, method: :delete, class: "btn btn-danger" %>
+								<% end %>
+								</div>
+							<% end %>
+					</div>
 	</div>
 </div>

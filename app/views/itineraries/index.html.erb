@@ -16,10 +16,10 @@
 	<div class="row">
 		<% @itineraries.each do |itinerary| %>
 		<div class="col-md-4 marketing places-index-img" >		
-		<%= link_to itinerary.name, itinerary_path(itinerary) %>
+		<h2><%= link_to itinerary.name, itinerary_path(itinerary) %></h2>
 		<% if user_signed_in? && current_user.admin? %>
-		<%= link_to 'Edit', edit_itinerary_path(itinerary)  %>
-		<%= link_to 'Delete', itinerary, method: :delete %>
+		<%= link_to 'Edit', edit_itinerary_path(itinerary), class: "btn btn-info"   %>
+		<%= link_to 'Delete', itinerary, method: :delete, class: "btn btn-danger" %>
 		<% end %>
 		</div>
 		<% end %>
