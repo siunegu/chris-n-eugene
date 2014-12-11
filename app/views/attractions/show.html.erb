@@ -11,6 +11,6 @@
 	<% end %>
 </div>
 
-<p><%= link_to 'Edit', edit_attraction_path(@attraction) %> |
-	<%= link_to 'Destroy', @attraction, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+<p><%= link_to 'Edit', edit_attraction_path(@attraction), class: "btn btn-info" %> |
+	<%= link_to 'Destroy', @attraction, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %></p>
 </div>
