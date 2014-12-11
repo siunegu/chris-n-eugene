@@ -35,12 +35,21 @@ Place.create ({
 })
 
 Place.create ({
-	name: "Lisboa",
-	country: "Portugal",	
+	name: "Aarhus",
+	country: "Denmark",	
 	description: "Intriguing sociably so physic marginally some ouch outran jeepers far more less when much by cockatoo enticing considering along and despite some egret quaintly less gave darn flung and yet far left rebound kookaburra much.",
-	languages: "Portugese",
+	languages: "Danish",
 	timezone: "UTC +12",
-	url: "http://8989.wp.egorealestate.com/wp-content/uploads/2012/01/lisboa_baixa_2110.jpg"	
+	url: "http://static.panoramio.com/photos/large/251316.jpg"	
+})
+
+Place.create ({
+	name: "Oslo",
+	country: "Norway",	
+	description: "Intriguing sociably so physic marginally some ouch outran jeepers far more less when much by cockatoo enticing considering along and despite some egret quaintly less gave darn flung and yet far left rebound kookaburra much.",
+	languages: "Danish",
+	timezone: "UTC +12",
+	url: "http://www.visitnorway.com/ImageVaultFiles/id_949/cf_1174/oslo_sa_740x334.jpg"	
 })
 
 ## Attraction 
@@ -73,7 +82,7 @@ Region.create ({
 	climate: "Temperate & Moist"
 })
 
-# Log in seeds
+## Log in seeds
 # Normal 
 User.create({
   email: "jondoe@wsigto.com",
