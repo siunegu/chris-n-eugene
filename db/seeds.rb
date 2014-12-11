@@ -1,7 +1,7 @@
 Place.create ({
 	name: "Hong Kong",
 	country: "China",
-	description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, necessitatibus quaerat. Laudantium sapiente, neque fuga consequatur officia laborum minus ipsam debitis modi! Officiis ex, distinctio sit sunt, molestiae ea placeat.",
+	description: "Suppose end get boy warrant general natural. Delightful met sufficient projection ask. Decisively everything principles if preference do impression of. Preserved oh so difficult repulsive on in household. In what do miss time be. Valley as be appear cannot so by.",
 	languages: "Chinese",
 	timezone: "UTC +8",	
 	url: "http://www.ustbsu.org/images/hk.jpg"
@@ -10,7 +10,7 @@ Place.create ({
 Place.create ({
 	name: "Bangladesh",
 	country: "China",	
-	description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius, nemo corporis ratione distinctio assumenda corrupti ipsa iusto, illum eum iure provident qui. Adipisci eveniet voluptatem, vel nemo incidunt!",
+	description: "Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected. He at no nothing forbade up moments.",
 	languages: "Muslamic",
 	timezone: "UTC +8",
 	url: "http://images.nationalgeographic.com/wpf/media-live/photos/000/060/cache/kenya_6020_600x450.jpg"	

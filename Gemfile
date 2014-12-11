@@ -55,3 +55,6 @@ gem 'autoprefixer-rails'
 
 # Use Gravatar
 gem 'gravtastic'
+
+#use Yelp
+gem 'yelp', require: 'yelp'

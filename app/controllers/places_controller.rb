@@ -31,8 +31,13 @@ class PlacesController < ApplicationController
 		FlickRaw.shared_secret="df20bd30ceec1a10"
 		flickr_photos = flickr.photos.search(text: @place.name, region: 6, is_getty: true, per_page: 50, privacy_filter: 1)
 		@photos = flickr_photos.map do |photo|
-			FlickRaw.url_b(photo)
+			FlickRaw.url_b(photo)  
 		end 
+
+    # place = Place.find params[:id] #find location of whats entered
+    @yelps = Yelp.client.search(@place.name) #yelp search based on whats entered
+
+
   end
 
   def edit  

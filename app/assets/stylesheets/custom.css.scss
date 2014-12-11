@@ -147,6 +147,14 @@
 	padding: 25px;
 }
 
+.yelp_icon {
+	border-radius: 50%;
+}
+
+.yelp_each {
+	margin: 45px 0;
+}
+
 /*Places index*/
 
 .places-index-img {
@@ -163,7 +171,19 @@
 	text-align: right;
 }
 
-/*Places show*/
+/*Each show*/
+
+.show-heading {
+	margin-top: 30px;
+	h1 {
+		font-size: 72px;
+		font-weight: 900;
+		font-style: italic;
+		letter-spacing: -0.05em;
+		line-height: 1.5em;
+		color: black;
+	}
+}
 
 .photo-wrapper {
 	height: 2000px;
