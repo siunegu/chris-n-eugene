@@ -8,8 +8,8 @@
 		<%= link_to 'Add Place', new_place_path, class: "btn btn-success" %>
 		</div>
 		<% end %>
-		<hr>
 	</div>
+			<hr>
 	<div class="row">
 		<% @places.each do |place| %>
 		<div class="col-md-4 marketing places-index-img" >
@@ -21,7 +21,7 @@
 			<% end %>
 
 			<br>
-			<div class="third">
+			<div class="index-items">
 				<% if user_signed_in? && current_user.admin? %>
 				<%= link_to 'Edit', edit_place_path(place), class: "btn btn-info"  %>
 				<%= link_to 'Destroy', place, method: :delete, class: "btn btn-danger" %>

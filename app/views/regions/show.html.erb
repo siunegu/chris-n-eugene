@@ -1,3 +1,5 @@
+<div class="container">
+
 <h2><%= @region.name %></h2>
 
 <%# @region.places.each do |place| %>
@@ -5,8 +7,13 @@
 <%# end %>
 
 <%# if user_signed_in? && current_user.admin? %>
+
+<% @region.places.each do |place| %>
+<% end %>
+
 <p>
   <%= link_to 'Edit', edit_region_path(@region) %> |
   <%= link_to 'Destroy', @region, method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>
 <%# end %>
+</div>

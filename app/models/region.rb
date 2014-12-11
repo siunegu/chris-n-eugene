@@ -11,4 +11,7 @@
 
 class Region < ActiveRecord::Base
 	has_many :places	
+
+	has_many :region_places
+	has_many :places, through: :region_places
 end
