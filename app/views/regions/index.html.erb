@@ -1,6 +1,6 @@
 <div class="container">
-	<div class="row">
-		<div class="col-lg-6">
+	<div class="row index-heading">
+		<div class="col-lg-8">
 			<h1>Regions<span class="glyphicon glyphicon-map-marker" style="color:#1abc9c"></span></h1>
 		</div>
 		<% if user_signed_in? && current_user.admin? %>
@@ -11,7 +11,6 @@
 	<hr>
 
 		<div class="row">
-
 				<% @regions.each do |region| %>	
 						<div class="col-md-4 marketing places-index-img" >
 

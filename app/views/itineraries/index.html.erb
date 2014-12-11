@@ -1,17 +1,27 @@
-<% if user_signed_in? && current_user.admin? %>
-<div>
-<%= link_to 'New Adventure', new_itinerary_path %>
-</div>
-<% end %>
+<div class="container">
+	<div class="row index-heading">
+		<div class="col-lg-8">
+			<h1>Adventures  <span class="glyphicon glyphicon-plane" style="color:#1abc9c"></span></h1>
+		</div>
+		<div class="col-lg-4">
 
-<ul>
-<% @itineraries.each do |itinerary| %>
-	<li>
-	<%= link_to itinerary.name, itinerary_path(itinerary) %>
-	<% if user_signed_in? && current_user.admin? %>
+			<% if user_signed_in? && current_user.admin? %>
+		<div class="col-lg-4-offset button-fix">
+				<%= link_to 'New Adventure', new_itinerary_path, class: "btn btn-success" %>
+			</div>
+			<% end %>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<% @itineraries.each do |itinerary| %>
+		<div class="col-md-4 marketing places-index-img" >		
+		<%= link_to itinerary.name, itinerary_path(itinerary) %>
+		<% if user_signed_in? && current_user.admin? %>
 		<%= link_to 'Edit', edit_itinerary_path(itinerary)  %>
 		<%= link_to 'Delete', itinerary, method: :delete %>
-	<% end %>
-	</li>
-<% end %>
-</ul>
+		<% end %>
+		</div>
+		<% end %>
+	</div>
+</div>

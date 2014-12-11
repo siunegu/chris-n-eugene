@@ -1,16 +1,28 @@
-<% if user_signed_in? && current_user.admin? %>
-<%= link_to 'Add Attraction', new_attraction_path %>
-<% end %>
-<p>
-<% @attraction.each do |attraction|  %>
-<div id="list_items">
-<%= link_to attraction.attraction_name, attraction  %>
+<div class="container">
+			<div class="row index-heading">
+				<div class="col-lg-8">
 
-<% if user_signed_in? && current_user.admin? %>
-	<%= link_to 'Edit', edit_attraction_path(attraction) %>
-	<%= link_to 'Destroy', attraction, method: :delete %>
-<% end %>	
+					<h1>Attractions <span class="glyphicon glyphicon-glass" style="color:#1abc9c"></span></h1>
+					</div>
+					<div class="col-lg-4">
+					<% if user_signed_in? && current_user.admin? %>
+					<div class="button-fix">
+						<%= link_to 'Add Attraction', new_attraction_path, class: "btn btn-success" %>
+					</div>
+					<% end %>
+					</div>
+			</div>
+			<hr>
+			<div class="row">
+				<% @attraction.each do |attraction|  %>
+				<div class="col-md-4 marketing places-index-img" >
+					<%= link_to attraction.attraction_name, attraction  %>
 
+					<% if user_signed_in? && current_user.admin? %>
+					<%= link_to 'Edit', edit_attraction_path(attraction) %>
+					<%= link_to 'Destroy', attraction, method: :delete %>
+					<% end %>	
+				</div>
+				<% end %>
+			</div>
 </div>
-<% end %>
-</p>
