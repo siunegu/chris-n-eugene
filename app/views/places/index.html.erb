@@ -8,12 +8,14 @@
 	<h1>Places</h1>
 	<div class="row">
 			<% @places.each do |place| %>
-			 <div class="col-md-4 marketing">
+			 <div class="col-md-4 marketing places-index-img" >
 
 				<%= link_to place_path(place) do %>
 					<%= place.name %>
-					<%= image_tag(@photos.first) %>
+					<br/>
+				<%= image_tag @photos.first %>					
 				<% end %>
+
 			
 				<% if user_signed_in? && current_user.admin? %>
 				<%= link_to 'Edit', edit_place_path(place)  %>
