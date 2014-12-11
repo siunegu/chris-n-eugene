@@ -9,6 +9,7 @@
 <%# if user_signed_in? && current_user.admin? %>
 
 <% @region.places.each do |place| %>
+	<%= place.name %> 
 <% end %>
 
 <p>

@@ -44,7 +44,7 @@ def find_regions
 end
 
 def region_params
-	params.require(:region).permit(:name)
+	params.require(:region).permit(:name, place_ids: [])
 end
 
 end

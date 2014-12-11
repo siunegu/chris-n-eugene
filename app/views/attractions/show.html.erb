@@ -1,9 +1,16 @@
+<div class="container index-heading">
+<div class="row yelp_wrapper">
+	<h2 class="marketing">Things to do in <%= @attraction.attraction_name %>!</h2>
+	<hr>    
+	<% @yelps.businesses.each do |biz| %> 
+	<div class="col-md-4 marketing yelp_each">
+		<%= image_tag biz.image_url, class: "yelp_icon" %> 
+		<h4> <%= link_to biz.name, biz.url %> </h4>
+		Five star rating: <%= image_tag biz.rating_img_url_small %>
+	</div>
+	<% end %>
+</div>
 
-    <h2><%= @attraction.attraction_name %></h2>
-  
-
-
-
-
-  <p><%= link_to 'Edit', edit_attraction_path(@attraction) %> |
-  <%= link_to 'Destroy', @attraction, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+<p><%= link_to 'Edit', edit_attraction_path(@attraction) %> |
+	<%= link_to 'Destroy', @attraction, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+</div>

@@ -21,6 +21,7 @@ before_action :find_attraction, only: [:show, :edit, :destroy, :update]
   end
 
   def show
+    @yelps = Yelp.client.search(@attraction.attraction_name)
   end
 
   def edit  
