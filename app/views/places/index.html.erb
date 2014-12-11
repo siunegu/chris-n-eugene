@@ -1,19 +1,25 @@
 <% if user_signed_in? && current_user.admin? %>
 <div>
-<%= link_to 'Add Place', new_place_path %>
+	<%= link_to 'Add Place', new_place_path %>
 </div>
 <% end %>
 
-<ul>
-<% @places.each do |place| %>
-	<li>
-	<%= link_to place.name, place_path(place) %>
+<div class="container">
+	<h1>Places</h1>
+	<div class="row">
+			<% @places.each do |place| %>
+			 <div class="col-md-4 marketing">
 
-	<% if user_signed_in? && current_user.admin? %>
-		<%= link_to 'Edit', edit_place_path(place)  %>
-		<%= link_to 'Destroy', place, method: :delete %>
-	<% end %>
-
-	</li>
-<% end %>
-</ul>
+				<%= link_to place_path(place) do %>
+					<%= place.name %>
+					<%= image_tag(@photos.first) %>
+				<% end %>
+			
+				<% if user_signed_in? && current_user.admin? %>
+				<%= link_to 'Edit', edit_place_path(place)  %>
+				<%= link_to 'Destroy', place, method: :delete %>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>
