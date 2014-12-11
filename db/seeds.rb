@@ -3,35 +3,44 @@ Place.create ({
 	country: "China",
 	description: "Suppose end get boy warrant general natural. Delightful met sufficient projection ask. Decisively everything principles if preference do impression of. Preserved oh so difficult repulsive on in household. In what do miss time be. Valley as be appear cannot so by.",
 	languages: "Chinese",
-	timezone: "UTC +8",	
+	timezone: "UTC +10",	
 	url: "http://www.ustbsu.org/images/hk.jpg"
 })
 
 Place.create ({
-	name: "Bangladesh",
-	country: "China",	
+	name: "New York",
+	country: "USA",	
 	description: "Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected. He at no nothing forbade up moments.",
-	languages: "Muslamic",
-	timezone: "UTC +8",
-	url: "http://images.nationalgeographic.com/wpf/media-live/photos/000/060/cache/kenya_6020_600x450.jpg"	
+	languages: "'Murican English",
+	timezone: "UTC -11",
+	url: "http://media-cdn.tripadvisor.com/media/photo-s/03/9b/2d/f2/new-york-city.jpg"	
 })
 
 Place.create ({
-	name: "Kenya",
-	country: "China",	
-	description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius, nemo corporis ratione distinctio assumenda corrupti ipsa iusto, illum eum iure provident qui. Adipisci eveniet voluptatem, vel nemo incidunt!",
-	languages: "Niganese",
+	name: "Singapore",
+	country: "Singapore",	
+	description: "Intriguing sociably so physic marginally some ouch outran jeepers far more less when much by cockatoo enticing considering along and despite some egret quaintly less gave darn flung and yet far left rebound kookaburra much.",
+	languages: "Singlish",
 	timezone: "UTC +8",
-	url: "http://www.livetradingnews.com/wp-content/uploads/2014/09/india-travel-insurance.jpeg"	
+	url: "http://media-cdn.tripadvisor.com/media/photo-o/03/9b/2e/11/singapore.jpg"	
 })
 
 Place.create ({
-	name: "Peru",
-	country: "China",	
-	description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius, nemo corporis ratione distinctio assumenda corrupti ipsa iusto, illum eum iure provident qui. Adipisci eveniet voluptatem, vel nemo incidunt!",
-	languages: "Mayan",
-	timezone: "UTC +8",
-	url: "http://cdni.condenast.co.uk/646x430/o_r/peru_cnt_9nov09_istock_b.jpg"	
+	name: "Buenos Aires",
+	country: "Argentina",	
+	description: "Pragmatically loudly squirrel and deer or some when smelled oh hello sobbed the more that outside around gnashed trying however cardinal tore alas grumbled jeez one yellow barring between intrepidly.",
+	languages: "Spanish",
+	timezone: "UTC +12",
+	url: "http://buenosaires.blogs.rice.edu/files/2012/09/puerto_madero__buenos_aires__argentina.jpg"	
+})
+
+Place.create ({
+	name: "Lisboa",
+	country: "Portugal",	
+	description: "Intriguing sociably so physic marginally some ouch outran jeepers far more less when much by cockatoo enticing considering along and despite some egret quaintly less gave darn flung and yet far left rebound kookaburra much.",
+	languages: "Portugese",
+	timezone: "UTC +12",
+	url: "http://8989.wp.egorealestate.com/wp-content/uploads/2012/01/lisboa_baixa_2110.jpg"	
 })
 
 ## Attraction 
@@ -45,12 +54,12 @@ Attraction.create ({
 
 ## Region
 Region.create ({
-	name: "Oceania",
+	name: "Americas South",
 	climate: "Warm"
 })
 
 Region.create ({
-	name: "Africa",
+	name: "Americas North",
 	climate: "Warm"
 })
 
@@ -59,10 +68,15 @@ Region.create ({
 	climate: "Warm"
 })
 
+Region.create ({
+	name: "Asia",
+	climate: "Temperate & Moist"
+})
+
 # Log in seeds
 # Normal 
 User.create({
-  email: "normal@example.com",
+  email: "jondoe@wsigto.com",
   password: "password",
   password_confirmation: "password",
   confirmed_at: Time.now
@@ -70,7 +84,7 @@ User.create({
 
 # Admin
 User.create({
-  email: "admin@example.com",
+  email: "admin@wsigto.com",
   password: "password",
   password_confirmation: "password",
   confirmed_at: Time.now,
@@ -79,6 +93,6 @@ User.create({
 
 ## Itinerary
 Itinerary.create ({
-	name: "Truly Asia"
+	name: "A Trip To the World Cities"
 	})
 
