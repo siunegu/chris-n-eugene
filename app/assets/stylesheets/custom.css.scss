@@ -77,6 +77,17 @@
 	display: inline-block;
 }
 
+@media (max-width: 1233px) {
+	.gravatar-responsive {
+		display: none;
+	}
+	.gravatar {
+		width: 30px;
+		display: inline-block;
+		margin: 0 20px;
+	}	
+}
+
 /*Main page*/
 
 .jumbotron-front-page {
@@ -111,7 +122,7 @@
 .third {
 	height: 200px;
 	padding: 15px;
-	margin-top: 60px;
+	margin-top: 25px;
 	img {
 		height: 100%;
 		transition: all .3s ease;
@@ -147,17 +158,22 @@
 	}
 }
 
+.button-fix {
+	padding: 25px 25px;
+	text-align: right;
+}
+
 /*.horizontal-list {
 	width: 100%;
 	padding: 5% 10%;
 	text-align: center;
 	margin: 0 auto;
-}*/
+	}*/
 
-/*Footer*/
+	/*Footer*/
 
-footer {
-	padding: 35px auto;
-	margin-bottom: 35px;
-	font-size: 16px;
-}
+	footer {
+		padding: 35px auto;
+		margin-bottom: 35px;
+		font-size: 16px;
+	}

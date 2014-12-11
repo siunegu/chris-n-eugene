@@ -13,8 +13,13 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :string(255)
 #  last_sign_in_ip        :string(255)
+#  confirmation_token     :string(255)
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
 #  created_at             :datetime
 #  updated_at             :datetime
+#  admin                  :boolean
+#  unconfirmed_email      :string(255)
 #
 
 require 'test_helper'

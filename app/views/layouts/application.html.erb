@@ -22,22 +22,24 @@
         <div id="log_in_area" class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
           <!-- Gravatar -->
-          <%= image_tag current_user.gravatar_url, class: "img-circle gravatar" %>
+          <%= image_tag current_user.gravatar_url, class: "img-circle gravatar" %>          
+          <span class="gravatar-responsive" style="margin-right: 12px">
+          Logged in as <strong><%= current_user.email %></strong>!
+          </span>  
           <!-- /Gravatar -->
-          Logged in as <strong><%= current_user.email %></strong>.
-
+          <span>
           <%= link_to edit_user_registration_path, class: "btn btn-info" do %>
             <span class="glyphicon glyphicon-edit"></span> Edit profile
           <% end %>  
 
-          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
           <% else %>
           <%= link_to "Sign up", new_user_registration_path, class: "btn btn-info" %> 
 
           <%= link_to new_user_session_path, class: "btn btn-default" do %>
             <span class="glyphicon glyphicon-flash"></span> Login
           <% end %>  
-
+</span>
           <% end %>
         </div> 
 
