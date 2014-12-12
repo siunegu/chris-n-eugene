@@ -8,7 +8,7 @@ before_action :find_itinerary, only: [:show, :edit, :update, :destroy]
 	def show
 		FlickRaw.api_key="e74c109a55b31224ff0e81e87f95ff7f"
 		FlickRaw.shared_secret="df20bd30ceec1a10"
-		flickr_photos = flickr.photos.search(text: @place.name, region: 6, is_getty: true, per_page: 50, privacy_filter: 1, extras: 'url_m')
+		flickr_photos = flickr.photos.search(text: @itinerary.places.first, region: 6, is_getty: true, per_page: 50, privacy_filter: 1, extras: 'url_m')
     @photos = flickr_photos.map do |p|
       p["url_m"]
     end		
