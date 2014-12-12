@@ -35,12 +35,12 @@ Place.create ({
 })
 
 Place.create ({
-	name: "Aarhus",
-	country: "Denmark",	
+	name: "Uppsala",
+	country: "Sweden",	
 	description: "Intriguing sociably so physic marginally some ouch outran jeepers far more less when much by cockatoo enticing considering along and despite some egret quaintly less gave darn flung and yet far left rebound kookaburra much.",
-	languages: "Danish",
+	languages: "Swedish",
 	timezone: "UTC +12",
-	url: "http://static.panoramio.com/photos/large/251316.jpg"	
+	url: "http://urbanpeek.com/wp-content/gallery/sweden/uppsala-sweden-3.jpg"	
 })
 
 Place.create ({
