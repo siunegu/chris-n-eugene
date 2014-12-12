@@ -9,12 +9,13 @@
 <%# if user_signed_in? && current_user.admin? %>
 
 <% @region.places.each do |place| %>
-	<%= place.name %> 
+<h4><%= link_to place.name, place_path(place) %> </h4>
+
 <% end %>
 
 <p>
-  <%= link_to 'Edit', edit_region_path(@region) %> |
-  <%= link_to 'Destroy', @region, method: :delete, data: {confirm: 'Are you sure?'} %>
+  <%= link_to 'Edit', edit_region_path(@region), class: "btn btn-info"  %> |
+  <%= link_to 'Destroy', @region, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
 </p>
 <%# end %>
 </div>

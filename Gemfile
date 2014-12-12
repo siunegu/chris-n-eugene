@@ -3,12 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: [:development, :test]
-
-gem 'pg', group: :production
-
-gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -61,5 +55,17 @@ gem 'autoprefixer-rails'
 # Use Gravatar
 gem 'gravtastic'
 
-#use Yelp
+# Use Yelp
 gem 'yelp', require: 'yelp'
+
+# Use sqlite3 for development
+gem 'sqlite3', group: [:development, :test]
+
+# Use Postgres for production
+gem 'pg', group: :production
+
+# Use rails 12 factor precompiler for assets
+gem 'rails_12factor', group: :production
+
+# Use Shareable Social Media plugin
+gem 'shareable'

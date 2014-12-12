@@ -13,7 +13,7 @@
   <div class="form-group">
     <%= f.label :place_ids, "Places:" %>
     <%# f.collection_check_boxes :place_ids, Place.all, :id, :name, class: "checkbox" %>
-    <%= collection_check_boxes(:place, :place_ids, Place.all, :id, :name) do |b| %>
+    <%= f.collection_check_boxes(:place_ids, Place.all, :id, :name) do |b| %>
      <span class="checkbox-gap">
      <%= b.label %>
      <%= b.check_box %>

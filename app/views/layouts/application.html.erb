@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Whyshouldigo.to</title>
+  <title>Whereshouldigo.to</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -24,22 +25,22 @@
           <!-- Gravatar -->
           <%= image_tag current_user.gravatar_url, class: "img-circle gravatar" %>          
           <span class="gravatar-responsive" style="margin-right: 12px">
-          Logged in as <strong><%= current_user.email %></strong>!
+            Logged in as <strong><%= current_user.email %></strong>!
           </span>  
           <!-- /Gravatar -->
           <span>
-          <%= link_to edit_user_registration_path, class: "btn btn-info" do %>
+            <%= link_to edit_user_registration_path, class: "btn btn-info" do %>
             <span class="glyphicon glyphicon-edit"></span> Edit profile
-          <% end %>  
+            <% end %>  
 
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
-          <% else %>
-          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-info" %> 
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
+            <% else %>
+            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-info" %> 
 
-          <%= link_to new_user_session_path, class: "btn btn-default" do %>
+            <%= link_to new_user_session_path, class: "btn btn-default" do %>
             <span class="glyphicon glyphicon-flash"></span> Login
-          <% end %>  
-</span>
+            <% end %>  
+          </span>
           <% end %>
         </div> 
 
@@ -60,7 +61,7 @@
 
   <!-- Footer -->
   <footer class="container">
-  <hr>
+    <hr>
     <p class="pull-right"><a href="#">Back to top</a></p>
     <p>&copy; 2014 Whereshouldigo, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
