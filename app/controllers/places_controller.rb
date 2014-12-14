@@ -58,6 +58,7 @@ class PlacesController < ApplicationController
                                  :description,
                                  :languages,
                                  :timezone,
+                                 :url,
                                  :region_id
                                 )
   end
