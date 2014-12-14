@@ -16,11 +16,17 @@
 
 class Place < ActiveRecord::Base
   belongs_to :region
-  has_many :activities
+  
+
+  has_many :attraction_places
+  has_many :attractions, through: :attraction_places
+
 
   has_many :itinerary_places
   has_many :itineraries, through: :itinerary_places
 
   has_many :region_places
   has_many :regions, through: :region_places
+
+
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211072501) do
+ActiveRecord::Schema.define(version: 20141214121546) do
 
   create_table "activities", force: true do |t|
     t.string   "name"
@@ -26,11 +26,25 @@ ActiveRecord::Schema.define(version: 20141211072501) do
     t.datetime "updated_at"
   end
 
+  create_table "attraction_places", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "attractions", force: true do |t|
     t.string   "attraction_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "place_id"
   end
+
+  create_table "attractions_places", id: false, force: true do |t|
+    t.integer "attraction_id", null: false
+    t.integer "place_id",      null: false
+  end
+
+  add_index "attractions_places", ["attraction_id", "place_id"], name: "index_attractions_places_on_attraction_id_and_place_id"
+  add_index "attractions_places", ["place_id", "attraction_id"], name: "index_attractions_places_on_place_id_and_attraction_id"
 
   create_table "itineraries", force: true do |t|
     t.string   "name"
@@ -55,6 +69,7 @@ ActiveRecord::Schema.define(version: 20141211072501) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
+    t.integer  "attraction_id"
   end
 
   create_table "region_places", force: true do |t|

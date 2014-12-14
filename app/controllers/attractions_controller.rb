@@ -42,7 +42,7 @@ before_action :find_attraction, only: [:show, :edit, :destroy, :update]
 
   private
   def attraction_params
-    params.require(:attraction).permit(:attraction_name)
+    params.require(:attraction).permit(:attraction_name, place_ids:[])
   end
 
   def find_attraction
