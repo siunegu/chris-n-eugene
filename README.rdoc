@@ -1,30 +1,15 @@
-== README
+== WHERE SHOULD I GO
 
-test
+Created by Chris Ma and Eugenius Lai
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Travel Inspiration App to see destinations around the world. Users can create itineraries with lists of locales. Destination views also have a list of relevant activities and restaurants to visit while in the area.
 
-Things you may want to cover:
+Technoolgies used:
 
-* Ruby version
+*Ruby on Rails
+*Flickr API
+*Yelp API
+*Bootstrap
+*HTML5
+*CSS3
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
