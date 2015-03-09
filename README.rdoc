@@ -6,10 +6,15 @@ A Travel Inspiration App to see destinations around the world. Users can create 
 
 Technoolgies used:
 
-*Ruby on Rails
-*Flickr API
-*Yelp API
-*Bootstrap
-*HTML5
-*CSS3
+* Ruby on Rails
+
+* Flickr API
+
+* Yelp API
+
+* Bootstrap
+
+* HTML5
+
+* CSS3
 
